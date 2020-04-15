@@ -1,7 +1,16 @@
 <?php
 
+/**
+ * Site pages read handler, curl-based
+ */
 class CrawlPageReader implements InterfaceCrawlReader
 {
+
+    /**
+     * Get html text of page by uri
+     * @param string $uri Uri to get page by
+     * @return string Html text
+     */
     function getHtml( $uri )
     {
         $request = curl_init($uri);
